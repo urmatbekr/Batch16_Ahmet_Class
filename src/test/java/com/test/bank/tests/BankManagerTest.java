@@ -1,5 +1,6 @@
 package com.test.bank.tests;
 
+import Utils.ConfigReader;
 import com.test.bank.pages.BankLoginPage;
 import com.test.bank.pages.BankManagerPage;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -25,8 +26,11 @@ public class BankManagerTest extends BankTestBase {
         BankLoginPage bankLoginPage = new BankLoginPage(driver);
         bankLoginPage.clickManagerButton();
         BankManagerPage bankManagerPage = new BankManagerPage(driver);
-        bankManagerPage.addCustomerFunctionality(driver, "Ahmet", "Balder", "123123",
-                "Customer added successfully with customer id :");
+        bankManagerPage.addCustomerFunctionality(driver,
+                ConfigReader.redProperty("QA_BankManager_username"),
+                ConfigReader.redProperty("QA_BankManager_password"),
+                ConfigReader.redProperty("QA_BankManager_zipcode"),
+                ConfigReader.redProperty("QA_BankManager_Message"));
     }
 
     @Test

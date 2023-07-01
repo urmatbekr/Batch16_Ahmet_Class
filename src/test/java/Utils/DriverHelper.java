@@ -21,8 +21,9 @@ public class DriverHelper {
 
     public static WebDriver getDriver(){
         if (driver==null||((RemoteWebDriver)driver).getSessionId()==null){
-            String browser = "chrome";
-            switch (browser){
+            //String browser = "chrome";
+
+            switch (ConfigReader.redProperty("browser")){
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
                     ChromeOptions chromeOptions = new ChromeOptions();
@@ -39,7 +40,8 @@ public class DriverHelper {
                     break;
             }
             driver.manage().window().maximize();
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(100));
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+            //driver.manage().deleteAllCookies(); // clear all cookies / delete cookies
         }
         return driver;
     }

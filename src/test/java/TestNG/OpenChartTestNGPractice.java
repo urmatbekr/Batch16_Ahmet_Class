@@ -1,5 +1,6 @@
 package TestNG;
 
+import Utils.ConfigReader;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -25,12 +26,12 @@ public class OpenChartTestNGPractice {
         options.addArguments("--remote-allow-origins=*");
         WebDriver driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.navigate().to("https://demo.opencart.com/admin/");
+        driver.navigate().to(ConfigReader.redProperty("QA_url"));
         driver.manage().window().maximize();
         WebElement userName = driver.findElement(By.xpath("//input[@id='input-username']"));
-        userName.sendKeys("demo");
+        userName.sendKeys(ConfigReader.redProperty("QA_openChart_username"));
         WebElement passWord = driver.findElement(By.xpath("//input[@id='input-password']"));
-        passWord.sendKeys("demo");
+        passWord.sendKeys(ConfigReader.redProperty("QA_openChart_password"));
         WebElement loginButton = driver.findElement(By.xpath("//button[@type='submit']"));
         loginButton.click();
         Thread.sleep(2000);

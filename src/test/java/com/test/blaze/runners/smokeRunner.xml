@@ -11,6 +11,8 @@
     </test>
 
     <test name="Bank Test">
+        <parameter name="expectedHeader" value="XYZ Bank"></parameter>
+
         <classes>
             <class name="com.test.bank.tests.BankLoginTest"></class>
         </classes>

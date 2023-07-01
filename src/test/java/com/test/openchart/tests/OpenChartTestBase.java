@@ -25,9 +25,9 @@ public class OpenChartTestBase {
         driver.navigate().to("https://demo.opencart.com/admin/index.php?route=common/login  ");
     }
 
-   @AfterMethod
-   public void tearDown(){
-      driver.quit();
-    }
+//   @AfterMethod
+//   public void tearDown(){
+//      driver.quit();
+//    }
 
 }

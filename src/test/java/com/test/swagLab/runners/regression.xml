@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="swaglab">
+    <test name="regression">
+
+        <classes>
+
+            <class name="com.test.swagLab.tests.LoginTest"></class>
+            <class name="com.test.swagLab.tests.CartSearchingTest"></class>
+
+        </classes>
+
+    </test>
+
+</suite>

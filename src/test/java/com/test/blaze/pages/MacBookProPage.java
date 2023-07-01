@@ -24,7 +24,7 @@ public class MacBookProPage extends BlazeTestBase {
     @FindBy (xpath = "//div[@id='more-information']")
     WebElement laptopInfo;
 
-    @FindBy (xpath = "//a[@onclick='addToCart(15)']")
+    @FindBy (xpath = "//a[contains(@onclick,'addToCart')]")
     WebElement addButton;
 
     public void textMacBookPro (String brandName, String productPrice, String productInfo) throws InterruptedException {

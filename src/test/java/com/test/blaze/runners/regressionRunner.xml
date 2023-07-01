@@ -5,6 +5,18 @@
 <suite name ="Regression Suite">
 
     <test name="Blaze Tests">
+        <parameter name="laptop" value="Laptops"></parameter>
+        <parameter name="macbookType" value="MacBook Pro"></parameter>
+        <parameter name="price" value="$1100 *includes tax"></parameter>
+        <parameter name="description" value="Product description"></parameter>
+        <parameter name="description2" value="Apple has introduced three new versions of its MacBook Pro line, including a 13-inch and 15-inch model with the Touch Bar, a thin, multi-touch strip display that sits above the MacBook Pro's keyboard."></parameter>
+        <parameter name="ProductAdded" value="Product added"></parameter>
+        <parameter name="name" value="Ahmet"></parameter>
+        <parameter name="lastName" value="Baldir"></parameter>
+        <parameter name="city" value="Istanbul"></parameter>
+        <parameter name="card" value="42343232"></parameter>
+        <parameter name="month" value="12"></parameter>
+        <parameter name="year" value="2023"></parameter>
 
         <classes>
 
@@ -15,15 +27,16 @@
         </classes>
     </test>
 
-    <test name="Bank Tests">
+<!--    <test name="Bank Tests">-->
+<!--        <parameter name="expectedHeader" value="XYZ Bank"></parameter>-->
+<!--        <classes>-->
 
-        <classes>
-            <class name="com.test.bank.tests.BankLoginTest"></class>
-            <class name="com.test.bank.tests.BankCustomerTest"></class>
-            <class name="com.test.bank.tests.BankManagerTest"></class>
+<!--            <class name="com.test.bank.tests.BankLoginTest"></class>-->
+<!--            <class name="com.test.bank.tests.BankCustomerTest"></class>-->
+<!--            <class name="com.test.bank.tests.BankManagerTest"></class>-->
 
-        </classes>
-    </test>
+<!--        </classes>-->
+<!--    </test>-->
 
  </suite>
 
